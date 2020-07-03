@@ -31,4 +31,4 @@ Here is a little bit of me. My name is Xiaotong Shen and I studied Media and Com
 
 By creating this blog, I will write down my study journey in data science and scratches.  
 
-![How I would love to preceive myself](/Users/xiaotongshen/Documents/GitHub/xtshn.github.io/assets/images/IMG_0364.JPG "Me")
+![How I would love to preceive myself](assets/images/IMG_0364.JPG "Me")
