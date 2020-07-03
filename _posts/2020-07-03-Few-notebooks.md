@@ -1,7 +1,7 @@
 ---
 title: Few notebooks
 key: 20200703
-tags: DataScience, Kaggle
+tags: DataScience Kaggle
 ---
 
 Here are the projects needed to review and redo.  
