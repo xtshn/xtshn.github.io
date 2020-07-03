@@ -1,1 +1,1 @@
-window.TEXT_SEARCH_DATA={'posts':[{'title':"One Year Later After Graduation",'url':"/2020/07/02/One-year-later-after-graduation.html"}]};
+window.TEXT_SEARCH_DATA={'posts':[{'title':"One year later after graduation",'url':"/xtshn.github.io/2020/07/02/One-year-later-after-graduation.html"},{'title':"Few notebooks",'url':"/xtshn.github.io/2020/07/03/Few-notebooks.html"}]};

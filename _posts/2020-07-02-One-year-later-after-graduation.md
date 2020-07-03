@@ -1,3 +1,9 @@
+---
+title: One year later after graduation
+key: 20200702
+tags: Scratch
+---
+
 A bad grade 
 
 It's been one year since I submitted my master thesis.  

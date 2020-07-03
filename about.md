@@ -27,8 +27,8 @@ key: page-about
 ---
 Hej!  
 
-Here is a little bit of me. My name is Xiaotong Shen and I studied Media and Communication and Swedish in Sweden. I grew up in Beijing, studied my bachelor in HangZhou and master in Sweden. The bond between me and Beijing has dwindled away. 
+Here is a little bit of me. My name is Xiaotong Shen and I studied Media and Communication and Swedish in Sweden. I grew up in Beijing, studied my BA in HangZhou and MSc in Sweden. 
 
-By creating this blog, I will record my study journey in data science and cultural experiences.  
+By creating this blog, I will write down my study journey in data science and scratches.  
 
-It feels a bit late to record my life now... anyhow, it's better than doing nothing.
+![How I would love to preceive myself](/Users/xiaotongshen/Documents/GitHub/xtshn.github.io/assets/images/IMG_0364.JPG "Me")

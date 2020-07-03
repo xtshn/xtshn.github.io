@@ -1,0 +1,19 @@
+I"z<p>Hej!</p>
+
+<hr />
+<p>layout: article
+title: Page - Article Header Overlay 
+Background Fill
+article_header:
+  type: overlay
+  theme: dark
+  background_color: ‘#123’
+  background_image: false
+—</p>
+
+<p>Here is a little bit of me. My name is Xiaotong Shen and I studied Media and Communication and Swedish in Sweden. I grew up in Beijing, studied my BA in HangZhou and MSc in Sweden.</p>
+
+<p>By creating this blog, I will write down my study journey in data science and scratches.</p>
+
+<p><img src="/Users/xiaotongshen/Documents/GitHub/xtshn.github.io/assets/images/IMG_0364.JPG" alt="How I would love to preceive myself" /></p>
+:ET
