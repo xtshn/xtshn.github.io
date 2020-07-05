@@ -1,0 +1,16 @@
+I"<h1 id="461-hamming-distance">461. Hamming Distance</h1>
+<p><a href="https://leetcode.com/problems/hamming-distance/">quesiton</a></p>
+
+<h3 id="solution">Solution</h3>
+<p>` class solution:
+    def hammingDistance(self, x: int, y: int) -&gt; int:<br />
+    count = 0</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for _ in range(32):
+    if (x&amp;1) != (y&amp;1):
+        count +=1
+    x&gt;&gt;=1
+    y&gt;&gt;=1
+return count `
+</code></pre></div></div>
+:ET

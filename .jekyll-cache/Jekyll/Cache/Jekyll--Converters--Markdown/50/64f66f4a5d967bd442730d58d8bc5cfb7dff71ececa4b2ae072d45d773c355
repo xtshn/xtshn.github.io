@@ -1,0 +1,100 @@
+I"ü/<h1 id="461-hamming-distance">461. Hamming Distance</h1>
+<p><a href="https://leetcode.com/problems/hamming-distance/">quesiton</a></p>
+
+<h3 id="solution">Solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">hammingDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>  
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">y</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="n">x</span><span class="o">&gt;&gt;=</span><span class="mi">1</span>
+            <span class="n">y</span><span class="o">&gt;&gt;=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">hammingDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">counts</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="n">y</span>
+        <span class="k">while</span> <span class="n">result</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">counts</span> <span class="o">+=</span> <span class="n">result</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">result</span> <span class="o">&gt;&gt;=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">counts</span>
+</code></pre></div></div>
+
+<h1 id="1089-duplicate-zeros">1089. Duplicate Zeros</h1>
+<p><a href="https://leetcode.com/problems/duplicate-zeros/">Question</a><br />
+Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right.</p>
+
+<p>Note that elements beyond the length of the original array are not written.</p>
+
+<p>Do the above modifications to the input array in place, do not return anything from your function.</p>
+<h3 id="solution-1">Solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">duplicateZeros</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+               <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">arr</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">2</span>
+                <span class="n">arr</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h1 id="977-squares-of-a-sorted-array">977. Squares of a Sorted Array</h1>
+<p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Question</a><br />
+Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.</p>
+
+<h3 id="solution-2">solution:</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">sortedSquares</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> 
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># i positive pointer to right; j negative pointer to left
+</span>        <span class="c1"># find the least negative pointer as the starting point going negatively, which is j
+</span>        <span class="k">while</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1">#compare squared value between two sides
+</span>        <span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span> <span class="ow">and</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># remember to count the last(smallest negative value) therefore including 0
+</span>            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">j</span> <span class="o">-=</span><span class="mi">1</span>
+        <span class="c1"># when either side is done or while loop break then two senarios: 1. lefted negative side 2. lefted positive side
+</span>        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">j</span> <span class="o">-=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+</code></pre></div></div>
+
+<h1 id="1295-find-numbers-with-even-number-of-digits">1295. Find Numbers with Even Number of Digits</h1>
+<p><a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Question</a><br />
+Given an array nums of integers, return how many of them contain an even number of digits.</p>
+
+<h3 id="solution-3">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> 
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">10</span> <span class="c1"># num becomes remaining digits
+</span>            <span class="k">if</span> <span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+:ET

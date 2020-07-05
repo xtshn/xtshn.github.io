@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>One year later after graduation - xtshns blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Daily algorithm - xtshns blog</title>
 
-<meta name="description" content="A bad grade.It’s been one year since I submitted my master thesis.The thesis is about the back side of Wikipedia, which means I investigated specifically the...">
-<link rel="canonical" href="http://localhost:4000/2020/07/02/One-year-later-after-graduation.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="461. Hamming Distancequesitonsolution    class solution:        def hammingDistance(self, x: int, y: int) -&gt; int:          count = 0        for _ in range...">
+<link rel="canonical" href="http://localhost:4000/2020/07/05/Daily-algorithm.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -271,32 +271,139 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>One year later after graduation</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Daily algorithm</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-02-One-year-later-after-graduation.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="One year later after graduation"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-05-Daily algorithm.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Daily algorithm"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Scratch">Scratch</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 02, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-02T00:00:00+02:00">
-    <meta itemprop="keywords" content="Scratch"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 05, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-05T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>A bad grade.</p>
+<div class="article__content" itemprop="articleBody"><h1 id="461-hamming-distance">461. Hamming Distance</h1>
+<p><a href="https://leetcode.com/problems/hamming-distance/">quesiton</a></p>
 
-<p>It’s been one year since I submitted my master thesis.</p>
+<h3 id="solution">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">hammingDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>  
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
 
-<p>The thesis is about the back side of Wikipedia, which means I investigated specifically the <strong>discussion page</strong> in terms of how people back aritcles participate in the process of writing articles and how knowledge/information is generated through the mechanism of Wikipedia. I chose to analyse how a policy in Wikipedia was created. Yes, even the rules and guides are created through discuss from users. To some extent, I think it’s sort of meta-analysis because articles are restricted by guidelines and policies however these rules are also created by deliberation.</p>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="o">!=</span> <span class="p">(</span><span class="n">y</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="n">x</span><span class="o">&gt;&gt;=</span><span class="mi">1</span>
+            <span class="n">y</span><span class="o">&gt;&gt;=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">count</span>
+</code></pre></div></div>
 
-<p>My intention was to research a topic where everyone is able to reach but rarely have closely insights or even without any clues of its existent. Unfortunately, I didn’t received a good grade since the work is lack of originality according to my examinator.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">hammingDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">counts</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="n">y</span>
+        <span class="k">while</span> <span class="n">result</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">counts</span> <span class="o">+=</span> <span class="n">result</span> <span class="o">&amp;</span> <span class="mi">1</span>
+            <span class="n">result</span> <span class="o">&gt;&gt;=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">counts</span>
+</code></pre></div></div>
 
-<p>I am kinda agree because I remembered I was stuck many times when I was trying to find references to link my thoughts during the process if I didn’t find appropriate sources. In other words, although my logic could make sense without proper references it wouldn’t be allowed to write it down by not indicating previous researches. True though, I might rely too much on the litterature and this is the point I felt that I won’t keep studying further in social science. I hope I am wrong and it’s just my personal experience and thought. Beside, I also felt that qualitative research must to be unique otherwise it might not be worthy to do further investigate. However, why can’t people pay attention to those literally <strong>‘normal’ things/people</strong> in our daily life? Must it have to be a social movement or very special situation? I am certainly lack of competence to spot on such things.</p>
+<h1 id="1089-duplicate-zeros">1089. Duplicate Zeros</h1>
+<p><a href="https://leetcode.com/problems/duplicate-zeros/">Question</a><br />
+Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right.</p>
 
-<p>Anyway, it’s been past and I also recorded a audio about my post-thesis life where I talked similarly about the last term in master study.</p>
+<p>Note that elements beyond the length of the original array are not written.</p>
 
-<p>If I could have chosen again, I would definitely choose another area which is easier to find jobs.</p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-02T00:00:00+02:00"><!-- start custom article footer snippet -->
+<p>Do the above modifications to the input array in place, do not return anything from your function.</p>
+<h3 id="solution-1">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">duplicateZeros</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arr</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+               <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">arr</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+                <span class="n">i</span><span class="o">+=</span><span class="mi">2</span>
+                <span class="n">arr</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h1 id="977-squares-of-a-sorted-array">977. Squares of a Sorted Array</h1>
+<p><a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Question</a><br />
+Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.</p>
+
+<h3 id="solution-2">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">sortedSquares</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> 
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># i positive pointer to right; j negative pointer to left
+</span>        <span class="c1"># find the least negative pointer as the starting point going negatively, which is j
+</span>        <span class="k">while</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span> <span class="ow">and</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span>
+
+        <span class="c1">#compare squared value between two sides
+</span>        <span class="n">ans</span><span class="o">=</span><span class="p">[]</span>
+        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span> <span class="ow">and</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span> <span class="c1"># remember to count the last(smallest negative value) therefore including 0
+</span>            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">:</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">j</span> <span class="o">-=</span><span class="mi">1</span>
+        <span class="c1"># when either side is done or while loop break then two senarios: 1. lefted negative side 2. lefted positive side
+</span>        <span class="k">while</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">N</span><span class="p">:</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="n">j</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+            <span class="n">j</span> <span class="o">-=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+</code></pre></div></div>
+
+<h1 id="1295-find-numbers-with-even-number-of-digits">1295. Find Numbers with Even Number of Digits</h1>
+<p><a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Question</a><br />
+Given an array nums of integers, return how many of them contain an even number of digits.</p>
+
+<h3 id="solution-3">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findNumbers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">while</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span> 
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+                <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">//</span> <span class="mi">10</span> <span class="c1"># num becomes remaining digits
+</span>            <span class="k">if</span> <span class="n">count</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h1 id="485-max-consecutive-ones">485. Max Consecutive Ones</h1>
+<p><a href="https://leetcode.com/problems/max-consecutive-ones/">Question</a><br />
+Given a binary array, find the maximum number of consecutive 1s in this array.</p>
+
+<h3 id="solution-4">solution</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">findMaxConsecutiveOnes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-05T00:00:00+02:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -307,7 +414,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="next"><span>NEXT</span><a href="/2020/07/03/Few-notebooks.html">Few notebooks</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/07/03/Few-notebooks.html">Few notebooks</a></div></div></div>
 
 </div>
 
