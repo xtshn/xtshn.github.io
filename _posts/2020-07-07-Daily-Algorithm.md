@@ -1,5 +1,5 @@
 ---
-title: Daily Algorithm and Priority Queues
+title: Daily Algorithm
 key: 20200707
 tags: Leetcode algorithm 
 ---
@@ -95,7 +95,8 @@ class Solution:
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
     pos = 0
-    # same method as the last one. First condition is the one we will ignore and continue until we find the one we need and swap it to the postion. All we don't need will be added at the end and i is the pointer to go through the list.
+    # same method as the last one. First condition is the one we will ignore and continue until we find the one we need and swap it to the postion. 
+    #All we don't need will be added at the end and i is the pointer to go through the list.
     for i in range(len(A)):
         if A[i] % 2 !=0:
             i += 1
