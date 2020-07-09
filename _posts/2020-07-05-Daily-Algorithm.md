@@ -1,5 +1,5 @@
 ---
-title: Daily algorithm
+title: Daily Algorithm
 key: 20200705
 tags: Leetcode algorithm
 ---
