@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Few notebooks - xtshns blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Daily Algorithm - xtshns blog</title>
 
-<meta name="description" content="Here are the projects needed to review and redo.List  K-pop analysis link  House Prices: Advanced Regression Techniques link  Titanic: Machine Learning from ...">
-<link rel="canonical" href="http://localhost:4000/2020/07/03/Few-notebooks.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="190. Reverse Bitsclass Solution:    def reverseBits(self, n: int) -&gt; int:        ret, power = 0, 31        while n:            ret += (n&amp;1) &lt;&lt; p...">
+<link rel="canonical" href="http://localhost:4000/2020/07/12/Daily-Algorithm.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -271,34 +271,43 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Few notebooks</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Daily Algorithm</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-03-Few-notebooks.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Few notebooks"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-12-Daily-Algorithm.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Daily Algorithm"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DataScience">DataScience</a>
+                href="/archive.html?tag=Leetcode">Leetcode</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Kaggle">Kaggle</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+02:00">
-    <meta itemprop="keywords" content="DataScience,Kaggle"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 12, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-12T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>Here are the projects needed to review and redo.</p>
+<div class="article__content" itemprop="articleBody"><h1 id="190-reverse-bits"><a href="https://leetcode.com/problems/reverse-bits/">190. Reverse Bits</a></h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverseBits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">ret</span><span class="p">,</span> <span class="n">power</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">31</span>
+        <span class="k">while</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="p">(</span><span class="n">n</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">power</span>
+            <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span>
+            <span class="n">power</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">ret</span>
 
-<h2 id="list">List</h2>
-<ul>
-  <li>K-pop analysis <a href="https://www.youtube.com/watch?v=lkhorCY5tFA&amp;list=PLfwO4-8NiQkFVYIV8cIUjCQA6yTbvV2L_">link</a></li>
-  <li>House Prices: Advanced Regression Techniques <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview">link</a></li>
-  <li>Titanic: Machine Learning from Disaster <a href="https://www.kaggle.com/c/titanic/overview">link</a></li>
-  <li>NLP-in-python-tutorial-master <a href="https://www.youtube.com/channel/UCyv-PL-QgkAXEfDRcKrYMeA">link</a></li>
-  <li>Pandas exercise <a href="https://www.youtube.com/watch?v=vmEHCJofslg&amp;t=1473s">link</a></li>
-</ul>
+</code></pre></div></div>
 
-<h3 id="k-pop-analysis">K-pop analysis</h3>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-03T00:00:00+02:00"><!-- start custom article footer snippet -->
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverseBits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="n">res</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">&lt;&lt;=</span> <span class="mi">1</span>
+            <span class="n">res</span> <span class="o">|=</span> <span class="n">n</span> <span class="o">&amp;</span> <span class="n">mask</span>
+            <span class="n">n</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></div>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-12T00:00:00+02:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -309,7 +318,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/07/02/One-year-later-after-graduation.html">One year later after graduation</a></div><div class="next"><span>NEXT</span><a href="/2020/07/05/Daily-Algorithm.html">Daily Algorithm</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/07/11/Daily-Algorithm.html">Daily Algorithm</a></div><div class="next"><span>NEXT</span><a href="/2020/07/13/Daily-Algorithm.html">Daily Algorithm</a></div></div></div>
 
 </div>
 

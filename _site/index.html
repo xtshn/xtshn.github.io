@@ -272,6 +272,148 @@
 
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>Home</h1></header><meta itemprop="headline" content="Home"><meta itemprop="author" content="Xiaotong Shen"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/13/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody"></div><p><a href="/2020/07/13/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 13, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-13T00:00:00+02:00"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/12/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">190. Reverse Bits
+class Solution:
+    def reverseBits(self, n: int) -&gt; int:
+        ret, power = 0, 31
+        while n:
+            ret += (n&amp;1) &lt;&lt; power
+            n &gt;&gt; 1
+            power -= 1
+        return ret
+
+
+
+class Solution:
+    def reverseBits(self, n: int) -&gt; int:
+        res, mask = 0, 1
+        for _ in range(3...</div><p><a href="/2020/07/12/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 12, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-12T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/11/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">78. Subsets
+class Solution:
+    def subsets(self, nums: List[int]) -&gt; List[List[int]]:
+        result = [[]]
+        for num in nums:
+            results += [curr + [num] for curr in nums]
+        return results
+
+solution
+
+328. Odd Even Linked List
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=Non...</div><p><a href="/2020/07/11/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 11, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-11T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/10/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">19. Remove Nth Node From End of List
+class Solution:
+    def removeNthFromEnd(self, head: ListNode, n: int) -&gt; ListNode:
+        dummy = ListNode(float('-inf))
+        dummy = head
+        slow = fast = dummy
+        for _ in range(n):
+            fast = fast.next
+        while fast.next: # if it was fast, then it would end up at the one need...</div><p><a href="/2020/07/10/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 10, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-10T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/09/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">662. Maximum Width of Binary Tree
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def widthOfBinaryTree(self, root: TreeNode) -&gt; int:
+        min_hash={}
+        max_hash={}
+
+    d...</div><p><a href="/2020/07/09/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 09, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-09T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/08/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">15. 3Sum
+
+class Solution:
+    def threeSum(self, nums: List[int]) -&gt; List[List[int]]:
+        results = []
+        n = len(nums)
+        nums.sort()
+        
+        for i in range(n-2):
+            if nums[0] + nums[1] + nums[2] &gt; 0:
+                break 
+            if nums[i] + nums[n-1] + nums[n-2] &lt;0:
+                continue
+    ...</div><p><a href="/2020/07/08/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 08, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-08T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/07/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">463. Island Perimeter
+
+class Solution:
+    def islandPerimeter(self, grid: List[List[int]]) -&gt; int:
+     result = 0
+     for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:
+                result += 4
+                if i&gt;0 and grid[i-1][j] == 1:
+                    result -= 2
+                i...</div><p><a href="/2020/07/07/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 07, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-07T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/2020/07/06/Daily-Algorithm-and-Priority-Queues.html"><h2 itemprop="headline" class="item__header">Daily Algorithm and Priority Queues</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">Priority Queue
 A prority queue is a Abstract Data Type (ADT) that operates similar to a normal queus except that each element has a certain priority. The priority of the elements in the priority queue determine the order in which elements are removed from PQ.
@@ -290,70 +432,20 @@ ADT only define how a data structure should be behaved and what meth...</div><p>
             </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 06, 2020</span>
             </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-06T00:00:00+02:00">
     <meta itemprop="keywords" content="Leetcode,algorithm,PriorityQueues"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/07/05/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily algorithm</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">461. Hamming Distance
-quesiton
-
-solution
-    class solution:
-        def hammingDistance(self, x: int, y: int) -&gt; int:  
-        count = 0
-
-        for _ in range(32):
-            if (x&amp;1) != (y&amp;1):
-                count +=1
-            x&gt;&gt;=1
-            y&gt;&gt;=1
-        return count
-
-
-class solution:
-    def hammingDistance(...</div><p><a href="/2020/07/05/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Leetcode">Leetcode</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=algorithm">algorithm</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 05, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-05T00:00:00+02:00">
-    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/07/03/Few-notebooks.html"><h2 itemprop="headline" class="item__header">Few notebooks</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">Here are the projects needed to review and redo.
-
-List
-
-  K-pop analysis link
-  House Prices: Advanced Regression Techniques link
-  Titanic: Machine Learning from Disaster link
-  NLP-in-python-tutorial-master link
-  Pandas exercise link
-
-
-K-pop analysis</div><p><a href="/2020/07/03/Few-notebooks.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DataScience">DataScience</a>
-            </li><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Kaggle">Kaggle</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+02:00">
-    <meta itemprop="keywords" content="DataScience,Kaggle"></div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2020/07/02/One-year-later-after-graduation.html"><h2 itemprop="headline" class="item__header">One year later after graduation</h2></a></header>
-          <div class="item__description"><div class="article__content" itemprop="description articleBody">A bad grade.
-
-It’s been one year since I submitted my master thesis.
-
-The thesis is about the back side of Wikipedia, which means I investigated specifically the discussion page in terms of how people back aritcles participate in the process of writing articles and how knowledge/information is generated through the mechanism of Wikipedia. I chos...</div><p><a href="/2020/07/02/One-year-later-after-graduation.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Scratch">Scratch</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 02, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-02T00:00:00+02:00">
-    <meta itemprop="keywords" content="Scratch"></div>
       </article></div>
-</div><div class="layout--home"></div>
+</div><div class="layout--home"><div class="pagination"><p>11 post articles, 2 pages.</p>
+    <div class="pagination__menu">
+      <ul class="menu menu--nowrap"><li><div class="button button--secondary button--circle disabled">
+            <i class="fas fa-angle-left"></i>
+          </div></li><li>
+              <div class="button button--primary button--circle focus"><span>1</span></div>
+            </li><li>
+                <a class="button button--secondary button--circle" href="/page2"><span>2</span></a>
+              </li><li><a class="button button--secondary button--circle" href="/page2">
+            <i class="fas fa-angle-right"></i>
+          </a></li></ul>
+    </div>
+  </div></div>
 <script>/*(function () {
 
 })();*/

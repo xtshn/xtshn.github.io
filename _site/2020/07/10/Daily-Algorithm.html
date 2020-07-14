@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Few notebooks - xtshns blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Daily Algorithm - xtshns blog</title>
 
-<meta name="description" content="Here are the projects needed to review and redo.List  K-pop analysis link  House Prices: Advanced Regression Techniques link  Titanic: Machine Learning from ...">
-<link rel="canonical" href="http://localhost:4000/2020/07/03/Few-notebooks.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="19. Remove Nth Node From End of Listclass Solution:    def removeNthFromEnd(self, head: ListNode, n: int) -&gt; ListNode:        dummy = ListNode(float('-inf...">
+<link rel="canonical" href="http://localhost:4000/2020/07/10/Daily-Algorithm.html"><link rel="alternate" type="application/rss+xml" title="xtshns blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -271,34 +271,103 @@
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Few notebooks</h1></header><span class="split-space">&nbsp;</span>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Daily Algorithm</h1></header><span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="Edit on Github"
-            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-03-Few-notebooks.md">
-            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Few notebooks"><div class="article__info clearfix"><ul class="left-col menu"><li>
+            href="https://github.com/xtshn/xtshn.github.io/tree/master/_posts/2020-07-10-Daily-Algorithm.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="Daily Algorithm"><div class="article__info clearfix"><ul class="left-col menu"><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=DataScience">DataScience</a>
+                href="/archive.html?tag=Leetcode">Leetcode</a>
             </li><li>
               <a class="button button--secondary button--pill button--sm"
-                href="/archive.html?tag=Kaggle">Kaggle</a>
-            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 03, 2020</span>
-            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-03T00:00:00+02:00">
-    <meta itemprop="keywords" content="DataScience,Kaggle"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 10, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-10T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody"><p>Here are the projects needed to review and redo.</p>
+<div class="article__content" itemprop="articleBody"><h1 id="19-remove-nth-node-from-end-of-list"><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">19. Remove Nth Node From End of List</a></h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">removeNthFromEnd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">dummy</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s">'-inf))
+        dummy = head
+        slow = fast = dummy
+        for _ in range(n):
+            fast = fast.next
+        while fast.next: # if it was fast, then it would end up at the one needed to be deleted. Then the slow pointer would lose the reference from the previous one. 
+            slow = slow.next
+            fast = fast.next
+        slow.next = slow.next.next
+        return dummy.next        
+</span></code></pre></div></div>
 
-<h2 id="list">List</h2>
-<ul>
-  <li>K-pop analysis <a href="https://www.youtube.com/watch?v=lkhorCY5tFA&amp;list=PLfwO4-8NiQkFVYIV8cIUjCQA6yTbvV2L_">link</a></li>
-  <li>House Prices: Advanced Regression Techniques <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview">link</a></li>
-  <li>Titanic: Machine Learning from Disaster <a href="https://www.kaggle.com/c/titanic/overview">link</a></li>
-  <li>NLP-in-python-tutorial-master <a href="https://www.youtube.com/channel/UCyv-PL-QgkAXEfDRcKrYMeA">link</a></li>
-  <li>Pandas exercise <a href="https://www.youtube.com/watch?v=vmEHCJofslg&amp;t=1473s">link</a></li>
-</ul>
+<h1 id="430-flatten-a-multilevel-doubly-linked-list"><a href="https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/">430. Flatten a Multilevel Doubly Linked List</a></h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, prev, next, child):
+        self.val = val
+        self.prev = prev
+        self.next = next
+        self.child = child
+"""</span>
 
-<h3 id="k-pop-analysis">K-pop analysis</h3>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-03T00:00:00+02:00"><!-- start custom article footer snippet -->
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="s">'Node'</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s">'Node'</span><span class="p">:</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="n">stack</span> <span class="o">=</span><span class="p">[]</span>
+
+        <span class="k">while</span> <span class="n">head</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">head</span><span class="p">.</span><span class="n">child</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
+                    <span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">head</span><span class="p">.</span><span class="nb">next</span><span class="p">)</span>
+                <span class="n">head</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">head</span><span class="p">.</span><span class="n">child</span>
+                <span class="n">head</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">head</span>
+                <span class="n">head</span><span class="p">.</span><span class="n">child</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">:</span>
+                <span class="n">head</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+                <span class="n">head</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">head</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span>
+        <span class="k">return</span> <span class="n">temp</span>
+</code></pre></div></div>
+
+<h1 id="206-reverse-linked-list"><a href="https://leetcode.com/problems/reverse-linked-list/">206. Reverse Linked List</a></h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">reverseList</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">curr</span> <span class="o">=</span> <span class="n">head</span>
+        <span class="n">prev</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="k">while</span> <span class="n">curr</span><span class="p">:</span>
+            <span class="n">curr</span><span class="p">.</span><span class="nb">next</span><span class="p">,</span> <span class="n">prev</span><span class="p">,</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">prev</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">curr</span><span class="p">.</span><span class="nb">next</span>
+        <span class="k">return</span> <span class="n">prev</span>
+</code></pre></div></div>
+
+<h1 id="203-remove-linked-list-elements"><a href="https://leetcode.com/problems/remove-linked-list-elements/">203. Remove Linked List Elements</a></h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">removeElements</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">,</span> <span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
+        <span class="n">dummy</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s">'-inf))
+        dummy.next = head
+        prev, curr = dummy, dummy.next
+
+        while curr:
+            if curr == val:
+                prev.next = curr.next
+            else:
+                prev = curr
+            curr = curr.next
+        return dummy.next
+</span></code></pre></div></div>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-10T00:00:00+02:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
 <div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div>
@@ -309,7 +378,7 @@
       </a>
     </p>
   </div></div></footer>
-<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/07/02/One-year-later-after-graduation.html">One year later after graduation</a></div><div class="next"><span>NEXT</span><a href="/2020/07/05/Daily-Algorithm.html">Daily Algorithm</a></div></div></div>
+<div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2020/07/09/Daily-Algorithm.html">Daily Algorithm</a></div><div class="next"><span>NEXT</span><a href="/2020/07/11/Daily-Algorithm.html">Daily Algorithm</a></div></div></div>
 
 </div>
 
