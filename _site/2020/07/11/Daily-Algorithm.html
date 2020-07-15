@@ -320,20 +320,19 @@
 </code></pre></div></div>
 
 <h1 id="234-palindrome-linked-list"><a href="https://leetcode.com/problems/palindrome-linked-list/">234. Palindrome Linked List</a></h1>
-<p>```python</p>
-<h1 id="definition-for-singly-linked-list">Definition for singly-linked list.</h1>
-<h1 id="class-listnode">class ListNode:</h1>
-<h1 id="def-initself-val0-nextnone">def <strong>init</strong>(self, val=0, next=None):</h1>
-<h1 id="selfval--val">self.val = val</h1>
-<h1 id="selfnext--next">self.next = next</h1>
-<p>class Solution:
-    def isPalindrome(self, head: ListNode) -&gt; bool:
-        stack = []
-        while head:
-            stack.append(head.val)
-            head = head.next
-        return stack = stack[::-1]
-``</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+</span><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">head</span><span class="p">:</span>
+            <span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">head</span><span class="p">.</span><span class="n">val</span><span class="p">)</span>
+            <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span>
+        <span class="k">return</span> <span class="n">stack</span> <span class="o">=</span> <span class="n">stack</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2020-07-11T00:00:00+02:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->
