@@ -272,6 +272,28 @@
 
 <!-- end custom main top snippet -->
 <article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>Home</h1></header><meta itemprop="headline" content="Home"><meta itemprop="author" content="Xiaotong Shen"/><div class="js-article-content"><div class="layout--articles"><div class="article-list items items--divided"><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
+          <header><a href="/2020/07/07/Daily-Algorithm.html"><h2 itemprop="headline" class="item__header">Daily Algorithm</h2></a></header>
+          <div class="item__description"><div class="article__content" itemprop="description articleBody">463. Island Perimeter
+
+class Solution:
+    def islandPerimeter(self, grid: List[List[int]]) -&gt; int:
+     result = 0
+     for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:
+                result += 4
+                if i&gt;0 and grid[i-1][j] == 1:
+                    result -= 2
+                i...</div><p><a href="/2020/07/07/Daily-Algorithm.html">Read more</a></p></div><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=Leetcode">Leetcode</a>
+            </li><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=algorithm">algorithm</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>Jul 07, 2020</span>
+            </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-07T00:00:00+02:00">
+    <meta itemprop="keywords" content="Leetcode,algorithm"></div>
+      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
           <header><a href="/2020/07/06/Daily-Algorithm-and-Priority-Queues.html"><h2 itemprop="headline" class="item__header">Daily Algorithm and Priority Queues</h2></a></header>
           <div class="item__description"><div class="article__content" itemprop="description articleBody">Priority Queue
 A prority queue is a Abstract Data Type (ADT) that operates similar to a normal queus except that each element has a certain priority. The priority of the elements in the priority queue determine the order in which elements are removed from PQ.
@@ -353,7 +375,7 @@ The thesis is about the back side of Wikipedia, which means I investigated speci
             </li></ul></div><meta itemprop="author" content="Xiaotong Shen"/><meta itemprop="datePublished" content="2020-07-02T00:00:00+02:00">
     <meta itemprop="keywords" content="Scratch"></div>
       </article></div>
-</div><div class="layout--home"><div class="pagination"><p>12 post articles, 2 pages.</p>
+</div><div class="layout--home"><div class="pagination"><p>13 post articles, 2 pages.</p>
     <div class="pagination__menu">
       <ul class="menu menu--nowrap"><li><a class="button button--secondary button--circle" href="/">
             <i class="fas fa-angle-left"></i>
